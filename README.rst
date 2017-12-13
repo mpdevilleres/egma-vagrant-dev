@@ -23,12 +23,19 @@ Requirements
 * `VirtualBox 5.1.26 <https://www.virtualbox.org/wiki/Downloads>`_
 
 Getting Started
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 Clone the Repo
 
 .. code-block:: bash
 
     git clone https://github.com/mpdevilleres/egma-vagrant-dev.git
+
+Create Forks of the backend and frontend repo
+
+.. code-block:: bash
+
+    https://github.com/egmaco/egma_root
+    https://github.com/egmaco/egma_stream
 
 As the development requires accessing private repo, you will need to add your credential to ``bootstrap.sh``
 

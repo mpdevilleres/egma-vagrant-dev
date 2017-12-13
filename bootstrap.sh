@@ -70,7 +70,7 @@ if [ -d "${BACKEND_DIR}" ]; then
     echo -e "\n---- Please consider pulling from source to update ----"
 else
     echo -e "\n---- Clone Backend Source ----"
-    sudo git clone https://${GITHUB_USER}:${GITHUB_PASS}@github.com/egmaco/egma_root.git ${BACKEND_DIR}
+    sudo git clone https://${GITHUB_USER}:${GITHUB_PASS}@github.com/${GITHUB_USER}/egma_root.git ${BACKEND_DIR}
 fi
 
 if [ -d "${FRONTEND_DIR}" ]; then
@@ -79,7 +79,7 @@ if [ -d "${FRONTEND_DIR}" ]; then
     echo -e "\n---- Please consider pulling from source to update ----"
 else
     echo -e "\n---- Clone Frontend Source ----"
-    sudo git clone https://${GITHUB_USER}:${GITHUB_PASS}@github.com/egmaco/egma_stream.git ${FRONTEND_DIR}
+    sudo git clone https://${GITHUB_USER}:${GITHUB_PASS}@github.com/${GITHUB_USER}/egma_stream.git ${FRONTEND_DIR}
 fi
 
 
@@ -93,8 +93,9 @@ echo -e "\n---- NPM Install Requirements Frontend ----"
 sudo apt-get install -y python-software-properties
 sudo curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt-get install -y nodejs
-sudo npm install @angular/cli -g
-sudo npm install --prefix ${FRONTEND_DIR} -g
+cd ${FRONTEND_DIR}
+sudo npm install -g
+sudo npm install -g @angular/cli
 
 
 #--------------------------------------------------
