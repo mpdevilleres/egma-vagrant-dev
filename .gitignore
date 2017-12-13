@@ -1,0 +1,5 @@
+*
+!.gitignore
+!Vagrantfile
+!bootstrap.sh
+!README.rst
